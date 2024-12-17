@@ -7,8 +7,3 @@ ref: homepage
 permalink: /d184033/
 order: 1
 ---
-
-<main class="container my-4" markdown="1">
-
-</main>
-
