@@ -1,0 +1,31 @@
+---
+layout: default
+---
+  <main>
+    <section>
+      <h2>Documenti dell'Amministrazione Trasparente</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome Documento</th>
+            <th scope="col">Tipo Documento</th>
+            <th scope="col">Data Pubblicazione</th>
+            <th scope="col">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% assign transparent_documents = site.pages | where: "trasparenza", "si" %}
+          {% for document in transparent_documents %}
+          <tr>
+            <th scope="row">{{ forloop.index }}</th>
+            <td>{{ document.title }}</td>
+            <td>{{ document.document_type }}</td>
+            <td>{{ document.publish_date }}</td>
+            <td><a href="{{ document.file_link }}" target="_blank">Visualizza</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+  </main>
